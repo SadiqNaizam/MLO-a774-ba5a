@@ -1,14 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import AuthCard from '../components/Auth/AuthCard';
 
-const Index = () => {
+/**
+ * LoginPage Component
+ *
+ * This component serves as the main login page for the application.
+ * It utilizes the LoginLayout pattern by centering the AuthCard component
+ * on a full-screen background.
+ *
+ * As per the component hierarchy:
+ * - Page: LoginPage
+ * - Template: LoginLayout (implicitly implemented here)
+ * - Organism: AuthCard
+ *
+ * Layout Requirements:
+ * - Overall layout: Flexbox, centered items, minimum screen height, background color.
+ *   (className="flex items-center justify-center min-h-screen bg-background")
+ * - The AuthCard component itself handles its specific sizing, padding, and background.
+ */
+const LoginPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="flex items-center justify-center min-h-screen bg-background">
+      <AuthCard />
+    </main>
   );
 };
 
-export default Index;
+export default LoginPage;
